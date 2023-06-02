@@ -30,7 +30,7 @@ public class LinkedList<E> implements List<E> {
         if(this.isEmpty()) {
             this.head = newNode;
         }else{
-            this.last.setNext(newNode);            
+            this.last.setNext(newNode);   
         }
         this.last = newNode;
         return true;

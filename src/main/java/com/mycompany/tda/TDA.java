@@ -34,6 +34,19 @@ public class TDA {
         link.addFirst(80);
         link.addFirst(2);
         System.out.println(link);
-        System.out.println(link.size());      
+        System.out.println(link.size()); 
+        
+        DoubleLinkedList<Integer> doubleLink = new DoubleLinkedList<>();
+        
+        for(int i = 1; i <= 16; i++) {
+            doubleLink.addLast(i);
+        }
+        
+        System.out.println(doubleLink);
+        System.out.println(doubleLink.size());
+        
+        doubleLink.addFirst(100);
+        System.out.println(doubleLink);
+        System.out.println(doubleLink.size());
     }
 }
