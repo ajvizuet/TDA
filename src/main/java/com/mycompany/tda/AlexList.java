@@ -56,7 +56,7 @@ public class AlexList<E> implements List<E> {
     }
     
     @Override
-    public boolean add(E element) {
+    public boolean addLast(E element) {
         if(element == null) {
             return false;
         }

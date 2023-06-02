@@ -9,7 +9,7 @@ package com.mycompany.tda;
  * @author alexv
  */
 public interface List<E> {
-    public boolean add(E element);
+    public boolean addLast(E element);
     public boolean addFirst(E element);
     public boolean remove(int index);
     public int size();
