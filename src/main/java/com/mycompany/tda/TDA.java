@@ -4,6 +4,9 @@
 
 package com.mycompany.tda;
 
+import java.util.PriorityQueue;
+import java.util.Queue;
+
 /**
  *
  * @author alexv
@@ -11,6 +14,7 @@ package com.mycompany.tda;
 public class TDA {
 
     public static void main(String[] args) {
+    /*
         AlexList<Integer> list1 = new AlexList<>();
         
         for(int i = 0; i < 10; i++) {
@@ -48,5 +52,19 @@ public class TDA {
         doubleLink.addFirst(100);
         System.out.println(doubleLink);
         System.out.println(doubleLink.size());
+        */
+        
+        createQueue();
+    }
+    
+    public static void createQueue() {
+        Queue<Person> q = new PriorityQueue<>();
+        q.offer(new Person("Alex", 2000, 25));
+        q.offer(new Person("Karla", 300, 20));
+        q.offer(new Person("José", 1150, 30));
+        q.offer(new Person("Juan", 990, 28));
+        while(!q.isEmpty()) {
+            System.out.println(q.poll());
+        }
     }
 }
