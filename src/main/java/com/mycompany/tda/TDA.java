@@ -4,6 +4,7 @@
 
 package com.mycompany.tda;
 
+import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
@@ -55,14 +56,26 @@ public class TDA {
         */
         
         createQueue();
+        Comparator<Integer> cmp = new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o1.compareTo(o2);
+            }
+            
+        };
+        System.out.println(cmp.compare(2,3));
     }
     
     public static void createQueue() {
-        Queue<Person> q = new PriorityQueue<>();
-        q.offer(new Person("Alex", 2000, 25));
-        q.offer(new Person("Karla", 300, 20));
-        q.offer(new Person("José", 1150, 30));
-        q.offer(new Person("Juan", 990, 28));
+        Queue<Integer> q = new PriorityQueue<>((x,y) -> {
+            return x.compareTo(y);
+        });
+        q.offer(3);
+        q.offer(6);
+        q.offer(2);
+        q.offer(4);
+        q.offer(1);
+        q.offer(9);
         while(!q.isEmpty()) {
             System.out.println(q.poll());
         }
